@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "react-native-bare-workflow-template",
+    "slug": "react-native-bare-workflow-template",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
