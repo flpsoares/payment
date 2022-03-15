@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "412381310105",
+    "project_id": "payment-c0fbf",
+    "storage_bucket": "payment-c0fbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412381310105:android:e500c70b3a31c248af9c08",
+        "android_client_info": {
+          "package_name": "com.payment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412381310105-tunavgflit11m5o64accpdukr4o7la1k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQMSJMrQcMLGDsfRSiaowLiyJ2dKdh6H4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412381310105-tunavgflit11m5o64accpdukr4o7la1k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

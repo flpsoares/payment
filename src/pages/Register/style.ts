@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
 import { background, primary, text } from '../../styles/cssGlobalVar'
 
-export const Container = styled.ScrollView`
+export const Container = styled.View`
   background: ${background};
   flex: 1;
   padding: 32px 14px;

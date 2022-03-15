@@ -1,4 +1,4 @@
-package com.reactnativebareworkflowtemplate;
+package com.payment;
 
 import android.os.Build;
 import android.os.Bundle;

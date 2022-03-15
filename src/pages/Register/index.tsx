@@ -13,6 +13,8 @@ import {
 import { useState } from 'react'
 import { Alert } from 'react-native'
 
+import auth from '@react-native-firebase/auth'
+
 export const Register: React.FC = () => {
   const { navigateToLogin } = useNavigate()
 
@@ -20,7 +22,25 @@ export const Register: React.FC = () => {
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
-  const handleSubmit = () => {}
+  const handleNewAccount = () => {
+    if (email !== '' && password !== '' && confirmPassword !== '') {
+      if (password !== confirmPassword) {
+        Alert.alert(
+          'Warning',
+          'The password and confirm your password fields must be the same.'
+        )
+      } else {
+        auth()
+          .createUserWithEmailAndPassword(email, password)
+          .then(() =>
+            Alert.alert(
+              'Success',
+              'Congratulations, your account has been successfully created!'
+            )
+          )
+      }
+    }
+  }
 
   return (
     <Container>
@@ -52,7 +72,7 @@ export const Register: React.FC = () => {
           value={confirmPassword}
         />
       </InputItem>
-      <Button onPress={handleSubmit}>
+      <Button onPress={handleNewAccount}>
         <ButtonText>Register</ButtonText>
       </Button>
       <ForgotPasswordButton onPress={navigateToLogin}>

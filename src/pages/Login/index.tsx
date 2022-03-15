@@ -11,11 +11,26 @@ import {
   ForgotPasswordButton,
   ForgotPasswordButtonText
 } from './style'
+
+import auth from '@react-native-firebase/auth'
+
+import { Alert } from 'react-native'
+
 export const Login: React.FC = () => {
   const { navigateToRegister } = useNavigate()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  const handleSignIn = () => {
+    if (email !== '' && password !== '') {
+      auth()
+        .signInWithEmailAndPassword(email, password)
+        .catch(() => Alert.alert('Warning', 'Incorrect email or password.'))
+    } else {
+      Alert.alert('Warning', 'Fill in all fields')
+    }
+  }
 
   return (
     <Container>
@@ -38,7 +53,7 @@ export const Login: React.FC = () => {
           value={password}
         />
       </InputItem>
-      <Button>
+      <Button onPress={handleSignIn}>
         <ButtonText>Login</ButtonText>
       </Button>
       <ForgotPasswordButton onPress={navigateToRegister}>
