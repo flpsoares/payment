@@ -1,25 +1,24 @@
-import { TouchableOpacity, Text } from 'react-native'
-import { Container } from './style'
+import { Text } from 'react-native'
+import { Container, Button, ButtonText } from './style'
 
 import auth from '@react-native-firebase/auth'
+import { useNavigate } from '../../contexts/NavigateContext'
 
 export const Home: React.FC = () => {
+  const { navigateToSale } = useNavigate()
+
   const handleSignOut = () => {
     auth().signOut()
-    console.log('executou')
   }
 
   return (
-    <Container style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <TouchableOpacity
-        style={{
-          backgroundColor: '#999',
-          padding: 20
-        }}
-        onPress={handleSignOut}
-      >
-        <Text>LogOut</Text>
-      </TouchableOpacity>
+    <Container>
+      <Button onPress={handleSignOut}>
+        <ButtonText>LogOut</ButtonText>
+      </Button>
+      <Button onPress={navigateToSale}>
+        <ButtonText>Sale</ButtonText>
+      </Button>
     </Container>
   )
 }

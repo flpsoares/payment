@@ -12,7 +12,7 @@ export const Button = styled.TouchableOpacity`
   background: ${primary};
   padding: 12px;
   border-radius: 12px;
-  width: 120px;
+  width: 150px;
   margin-bottom: 12px;
 `
 
@@ -21,4 +21,10 @@ export const ButtonText = styled.Text`
   font-size: 18px;
   font-weight: bold;
   color: ${text};
+`
+
+export const Input = styled.TextInput`
+  padding: 12px;
+  color: ${text};
+  font-size: 22px;
 `

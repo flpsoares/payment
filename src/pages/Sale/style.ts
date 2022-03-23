@@ -12,7 +12,7 @@ export const Button = styled.TouchableOpacity`
   background: ${primary};
   padding: 12px;
   border-radius: 12px;
-  width: 120px;
+  width: 150px;
   margin-bottom: 12px;
 `
 
